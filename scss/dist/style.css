@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.container {
+  --size: 35vw;
+  height: var(--size);
+  width: var(--size);
+  position: relative;
+  left: calc((100vw - var(--size))/2);
+  top: calc((100vh- var(--size))/2);
+  margin: auto;
+  animation: container 2s infinite linear;
+}
+@keyframes container {
+  to {
+    transform: rotate(1.5turn);
+  }
+}
+
+.box {
+  --border1: hsl(0,100,50);
+  --border2: hsl(180,100,50);
+  width: 100%;
+  height: 100%;
+  border: 3px solid;
+  border-color: red;
+  position: absolute;
+  animation: border 2s infinite alternate linear;
+}
+@keyframes border {
+  to {
+    border-color: aqua;
+  }
+}
+
+.box:nth-child(1) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #c0c0c0;
+  transform: rotate(6deg) scale(0.9833333333);
+}
+
+.box:nth-child(2) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #808080;
+  transform: rotate(12deg) scale(0.9666666667);
+}
+
+.box:nth-child(3) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #fff;
+  transform: rotate(18deg) scale(0.95);
+}
+
+.box:nth-child(4) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #800000;
+  transform: rotate(24deg) scale(0.9333333333);
+}
+
+.box:nth-child(5) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff0000;
+  transform: rotate(30deg) scale(0.9166666667);
+}
+
+.box:nth-child(6) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #800080;
+  transform: rotate(36deg) scale(0.9);
+}
+
+.box:nth-child(7) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff00ff;
+  transform: rotate(42deg) scale(0.8833333333);
+}
+
+.box:nth-child(8) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #008000;
+  transform: rotate(48deg) scale(0.8666666667);
+}
+
+.box:nth-child(9) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #00ff00;
+  transform: rotate(54deg) scale(0.85);
+}
+
+.box:nth-child(10) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #808000;
+  transform: rotate(60deg) scale(0.8333333333);
+}
+
+.box:nth-child(11) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffff00;
+  transform: rotate(66deg) scale(0.8166666667);
+}
+
+.box:nth-child(12) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #000080;
+  transform: rotate(72deg) scale(0.8);
+}
+
+.box:nth-child(13) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #0000ff;
+  transform: rotate(78deg) scale(0.7833333333);
+}
+
+.box:nth-child(14) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #008080;
+  transform: rotate(84deg) scale(0.7666666667);
+}
+
+.box:nth-child(15) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #00ffff;
+  transform: rotate(90deg) scale(0.75);
+}
+
+.box:nth-child(16) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffa500;
+  transform: rotate(96deg) scale(0.7333333333);
+}
+
+.box:nth-child(17) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #7fffd4;
+  transform: rotate(102deg) scale(0.7166666667);
+}
+
+.box:nth-child(18) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffe4c4;
+  transform: rotate(108deg) scale(0.7);
+}
+
+.box:nth-child(19) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #8a2be2;
+  transform: rotate(114deg) scale(0.6833333333);
+}
+
+.box:nth-child(20) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #a52a2a;
+  transform: rotate(120deg) scale(0.6666666667);
+}
+
+.box:nth-child(21) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #5f9ea0;
+  transform: rotate(126deg) scale(0.65);
+}
+
+.box:nth-child(22) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #d2691e;
+  transform: rotate(132deg) scale(0.6333333333);
+}
+
+.box:nth-child(23) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff7f50;
+  transform: rotate(138deg) scale(0.6166666667);
+}
+
+.box:nth-child(24) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #b8860b;
+  transform: rotate(144deg) scale(0.6);
+}
+
+.box:nth-child(25) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #bdb76b;
+  transform: rotate(150deg) scale(0.5833333333);
+}
+
+.box:nth-child(26) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #8b008b;
+  transform: rotate(156deg) scale(0.5666666667);
+}
+
+.box:nth-child(27) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #e9967a;
+  transform: rotate(162deg) scale(0.55);
+}
+
+.box:nth-child(28) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffd700;
+  transform: rotate(168deg) scale(0.5333333333);
+}
+
+.box:nth-child(29) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #daa520;
+  transform: rotate(174deg) scale(0.5166666667);
+}
+
+.box:nth-child(30) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #f0e68c;
+  transform: rotate(180deg) scale(0.5);
+}
+
+.box:nth-child(31) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #f08080;
+  transform: rotate(186deg) scale(0.4833333333);
+}
+
+.box:nth-child(32) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffa07a;
+  transform: rotate(192deg) scale(0.4666666667);
+}
+
+.box:nth-child(33) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #87cefa;
+  transform: rotate(198deg) scale(0.45);
+}
+
+.box:nth-child(34) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #66cdaa;
+  transform: rotate(204deg) scale(0.4333333333);
+}
+
+.box:nth-child(35) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ba55d3;
+  transform: rotate(210deg) scale(0.4166666667);
+}
+
+.box:nth-child(36) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #9370db;
+  transform: rotate(216deg) scale(0.4);
+}
+
+.box:nth-child(37) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #dda0dd;
+  transform: rotate(222deg) scale(0.3833333333);
+}
+
+.box:nth-child(38) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #8b4513;
+  transform: rotate(228deg) scale(0.3666666667);
+}
+
+.box:nth-child(39) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #f4a460;
+  transform: rotate(234deg) scale(0.35);
+}
+
+.box:nth-child(40) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #a0522d;
+  transform: rotate(240deg) scale(0.3333333333);
+}
+
+.box:nth-child(41) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #f5f5dc;
+  transform: rotate(246deg) scale(0.3166666667);
+}
+
+.box:nth-child(42) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff1493;
+  transform: rotate(252deg) scale(0.3);
+}
+
+.box:nth-child(43) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #adff2f;
+  transform: rotate(258deg) scale(0.2833333333);
+}
+
+.box:nth-child(44) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #cd5c5c;
+  transform: rotate(264deg) scale(0.2666666667);
+}
+
+.box:nth-child(45) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #6b8e23;
+  transform: rotate(270deg) scale(0.25);
+}
+
+.box:nth-child(46) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff4500;
+  transform: rotate(276deg) scale(0.2333333333);
+}
+
+.box:nth-child(47) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #da70d6;
+  transform: rotate(282deg) scale(0.2166666667);
+}
+
+.box:nth-child(48) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #cd853f;
+  transform: rotate(288deg) scale(0.2);
+}
+
+.box:nth-child(49) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #2e8b57;
+  transform: rotate(294deg) scale(0.1833333333);
+}
+
+.box:nth-child(50) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #6a5acd;
+  transform: rotate(300deg) scale(0.1666666667);
+}
+
+.box:nth-child(51) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #4682b4;
+  transform: rotate(306deg) scale(0.15);
+}
+
+.box:nth-child(52) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ff6347;
+  transform: rotate(312deg) scale(0.1333333333);
+}
+
+.box:nth-child(53) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #663399;
+  transform: rotate(318deg) scale(0.1166666667);
+}
+
+.box:nth-child(54) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #f0ffff;
+  transform: rotate(324deg) scale(0.1);
+}
+
+.box:nth-child(55) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #228b22;
+  transform: rotate(330deg) scale(0.0833333333);
+}
+
+.box:nth-child(56) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #e6e6fa;
+  transform: rotate(336deg) scale(0.0666666667);
+}
+
+.box:nth-child(57) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #90ee90;
+  transform: rotate(342deg) scale(0.05);
+}
+
+.box:nth-child(58) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #7b68ee;
+  transform: rotate(348deg) scale(0.0333333333);
+}
+
+.box:nth-child(59) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffe4e1;
+  transform: rotate(354deg) scale(0.0166666667);
+}
+
+.box:nth-child(60) {
+  --border1: nth($colores, $i);
+  --border2: nth($colores, $i);
+  border-color: #ffdab9;
+  transform: rotate(360deg) scale(0);
+}
